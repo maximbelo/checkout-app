@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@200;300;400;500;700&display=swap");
+
+// ===========================================
+// General Styles
+// ===========================================
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  color: #2c3642;
+}
+
+// ===========================================
+// TheHeader.vue
+// ===========================================
+header {
+  background-color: #252f3d;
+
+  .main-logo {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem;
+    margin: 0 auto;
+    max-width: 1440px;
+
+    img {
+      width: 294px;
+      cursor: pointer;
+    }
+
+    .mobile {
+      display: none;
+    }
+  }
+}
+
+// ===========================================
+// PaymentForm.vue
+// ===========================================
+.payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.main-header {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  position: relative;
+  right: 13rem;
+}
+
+.form-content {
+  border-radius: 8px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+  width: 502px;
+}
+
+.payment-type {
+  background: #fafafc;
+
+  h3 {
+    margin: 0;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .payment-logos {
+    display: flex;
+    margin-top: 0.5rem;
+
+    .logo {
+      width: 52.42px;
+      height: 37px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+      margin: 0.5rem;
+    }
+
+    .selected-card {
+      transform: scale(1.3);
+      transition: transform 0.3s ease;
+    }
+  }
+}
+
+.payment-type,
+form {
+  padding: 2rem 3rem 0.5rem 3rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  position: relative;
+
+  input {
+    font-size: 16px;
+    padding: 0.8rem 0.5rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  label {
+    font-size: 12px;
+    position: absolute;
+    top: -7px;
+    left: 10px;
+    background: white;
+    color: #4d5c6f;
+
+    span {
+      color: #cf4055;
+    }
+  }
+
+  select {
+    font-size: 16px;
+    padding: 0.8rem 0.5rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    color: #4d5c6f;
+  }
+
+  .error-highlight {
+    border: 1px solid #da1e28;
+  }
+
+  .error-text {
+    color: #da1e28;
+  }
+}
+
+.expiry-date-and-cvv {
+  display: flex;
+  position: relative;
+
+  .card-month {
+    flex-basis: 33%;
+    margin-right: 0.5rem;
+  }
+
+  .card-year {
+    flex-basis: 33%;
+  }
+
+  .card-cvv {
+    flex-basis: 33%;
+    margin-left: 2.5rem;
+  }
+
+  .requiredOne {
+    position: absolute;
+    color: #cf4055;
+    right: 18px;
+    top: 11px;
+    font-size: 14px;
+  }
+
+  .requiredTwo {
+    position: absolute;
+    color: #cf4055;
+    right: 23px;
+    top: 11px;
+    font-size: 14px;
+  }
+}
+
+.error-message {
+  text-align: left;
+  color: #da1e28;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+.buttons-container {
+  margin-top: 3rem;
+
+  button {
+    margin: 0 0.5rem;
+    border-radius: 6px;
+    padding: 10px 32px;
+    gap: 10px;
+    width: 145px;
+    height: 46px;
+    cursor: pointer;
+
+    &:disabled {
+      color: #fff;
+      background: #c8cdd2;
+      border: none;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// ===========================================
+// BaseButton.vue
+// ===========================================
+.back {
+  color: #4790a1;
+  background: #fff;
+  border: 1px solid #4790a1;
+  transition: all 0.3s ease;
+}
+
+.allow-submission {
+  color: #fff;
+  background: #127c95;
+  border: none;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background: #3c727e;
+  }
+}
+
+// ===========================================
+// BaseCard.vue
+// ===========================================
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ===========================================
+// Media Queries
+// ===========================================
+
+@media (max-width: 550px) {
+  header {
+    .main-logo {
+      .desktop {
+        display: none;
+      }
+
+      .mobile {
+        display: initial;
+        width: 37px;
+        height: 37px;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  .main-header {
+    position: initial;
+    margin: 0 auto 0.8rem 1rem;
+  }
+
+  .payment-type,
+  form {
+    padding: 2rem 3rem 2rem 3rem;
+  }
+
+  .form-content {
+    width: auto;
+  }
+
+  .card {
+    margin: 0 1rem;
+  }
+
+  .expiry-date-and-cvv {
+    flex-wrap: wrap;
+
+    .card-month {
+      flex-basis: 49%;
+    }
+
+    .card-year {
+      flex-basis: 48%;
+    }
+
+    .card-cvv {
+      width: 100%;
+      margin: 0;
+      flex-basis: auto;
+    }
+  }
+}
+
+@media (max-width: 410px) {
+  .expiry-date-and-cvv {
+    .card-month,
+    .card-year {
+      flex-basis: 100%;
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  .buttons-container button {
+    margin: 0.5rem;
+  }
+}
