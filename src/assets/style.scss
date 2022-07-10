@@ -219,14 +219,13 @@ form {
   color: #4790a1;
   background: #fff;
   border: 1px solid #4790a1;
-  transition: all 0.3s ease;
 }
 
 .allow-submission {
   color: #fff;
   background: #127c95;
   border: none;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 
   &:hover,
   &:focus {
@@ -297,6 +296,19 @@ form {
       width: 100%;
       margin: 0;
       flex-basis: auto;
+    }
+  }
+
+  .buttons-container {
+    width: 100%;
+    color: #fff;
+    box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.15);
+    padding: 0 0 7rem 0;
+
+    button {
+      display: block;
+      width: 90%;
+      margin: 1rem auto;
     }
   }
 }
