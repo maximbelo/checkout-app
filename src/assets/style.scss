@@ -265,7 +265,7 @@ form {
 
   .main-header {
     position: initial;
-    margin: 0 auto 0.8rem 1rem;
+    margin: 5rem auto 0.8rem 1rem;
   }
 
   .payment-type,
@@ -320,9 +320,5 @@ form {
       flex-basis: 100%;
       margin: 0 0 1rem 0;
     }
-  }
-
-  .buttons-container button {
-    margin: 0.5rem;
   }
 }
