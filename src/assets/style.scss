@@ -10,7 +10,6 @@
 }
 
 body {
-  overflow: hidden;
   margin: 0;
   font-family: "Lato", sans-serif;
   color: #2c3642;
@@ -195,6 +194,8 @@ form {
   margin-top: 3rem;
 
   button {
+    font-size: 16px;
+    font-weight: 700;
     margin: 0 0.5rem;
     border-radius: 6px;
     padding: 10px 32px;
@@ -310,7 +311,6 @@ form {
       display: block;
       width: 90%;
       margin: 1rem auto;
-      font-weight: 700;
     }
   }
 }
