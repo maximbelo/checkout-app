@@ -128,7 +128,6 @@ export default {
       cardCvv: "",
       minCardYear: new Date().getFullYear(),
       errorType: "",
-      readyToContinue: false,
     };
   },
 
