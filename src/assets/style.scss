@@ -301,10 +301,12 @@ form {
 
     .card-month {
       flex-basis: 49%;
+      margin-bottom: 0;
     }
 
     .card-year {
       flex-basis: 48%;
+      margin-bottom: 0;
     }
 
     .card-cvv {
@@ -333,7 +335,7 @@ form {
     .card-month,
     .card-year {
       flex-basis: 100%;
-      margin: 0 0 1rem 0;
+      margin: 0;
     }
   }
 
