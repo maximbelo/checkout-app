@@ -27,24 +27,22 @@
 
         <form @submit.prevent>
           <div class="form-group">
-            <label for="card-name" :class="{ 'error-text': errorType === 'Invalid Name' }"
-              >Name on Card<span>*</span></label
-            >
             <input
               id="card-name"
               type="text"
               v-model.trim="cardName"
               :class="{ 'error-highlight': errorType === 'Invalid Name' }"
+              placeholder=" "
             />
+            <label for="card-name" :class="{ 'error-text': errorType === 'Invalid Name' }"
+              >Name on Card <span>*</span></label
+            >
           </div>
           <p v-if="errorType === 'Invalid Name'" class="error-message">
             Please enter a valid name and try again.
           </p>
 
           <div class="form-group">
-            <label for="card-number" :class="{ 'error-text': errorType === 'Invalid Card' }"
-              >Card Number<span>*</span></label
-            >
             <input
               id="card-number"
               type="text"
@@ -52,7 +50,11 @@
               v-model.trim="cardNumber"
               @keyup="detectCardType(cardNumber)"
               :class="{ 'error-highlight': errorType === 'Invalid Card' }"
+              placeholder=" "
             />
+            <label for="card-number" :class="{ 'error-text': errorType === 'Invalid Card' }"
+              >Card Number <span>*</span></label
+            >
           </div>
           <p v-if="errorType === 'Invalid Card'" class="error-message">
             Sorry, this card number is not valid. Please try again.
@@ -85,16 +87,17 @@
             </div>
 
             <div class="form-group card-cvv">
-              <label for="card-cvv" :class="{ 'error-text': errorType === 'Invalid CVV' }"
-                >CSC/CVV<span>*</span></label
-              >
               <input
                 id="card-cvv"
                 type="text"
                 maxlength="3"
                 v-model.trim="cardCvv"
                 :class="{ 'error-highlight': errorType === 'Invalid CVV' }"
+                placeholder=" "
               />
+              <label for="card-cvv" :class="{ 'error-text': errorType === 'Invalid CVV' }"
+                >CSC/CVV <span>*</span></label
+              >
               <p v-if="errorType === 'Invalid CVV'" class="error-message">
                 Sorry, that is not a valid CVV number.
               </p>
