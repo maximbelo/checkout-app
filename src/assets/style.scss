@@ -110,6 +110,7 @@ form {
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 4px;
+    height: 54px;
   }
 
   label {
@@ -133,6 +134,7 @@ form {
     border-radius: 4px;
     background: #fff;
     color: #4d5c6f;
+    height: 54px;
   }
 
   .error-highlight {
@@ -315,7 +317,7 @@ form {
   }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 430px) {
   .expiry-date-and-cvv {
     .card-month,
     .card-year {
@@ -325,6 +327,6 @@ form {
   }
 
   .buttons-container {
-    padding-bottom: 7rem;
+    padding-bottom: 3rem;
   }
 }
