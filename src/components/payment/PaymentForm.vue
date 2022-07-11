@@ -59,9 +59,8 @@
           </p>
 
           <div class="expiry-date-and-cvv">
-            <div class="form-group card-month">
+            <div class="form-group card-month" :class="{ 'card-asterisk-month': cardMonth === '' }">
               <label for="card-month"></label>
-              <span class="requiredOne">*</span>
               <select id="card-month" v-model="cardMonth">
                 <option value="" disabled selected>Month</option>
                 <option
@@ -75,9 +74,8 @@
               </select>
             </div>
 
-            <div class="form-group card-year">
+            <div class="form-group card-year" :class="{ 'card-asterisk-year': cardYear === '' }">
               <label for="card-year"></label>
-              <span class="requiredTwo">*</span>
               <select id="card-year" v-model="cardYear">
                 <option value="" disabled selected>Year</option>
                 <option :value="$index + minCardYear" v-for="(n, $index) in 12" :key="n">

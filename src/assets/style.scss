@@ -10,6 +10,7 @@
 }
 
 body {
+  overflow: hidden;
   margin: 0;
   font-family: "Lato", sans-serif;
   color: #2c3642;
@@ -47,7 +48,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   min-height: 100vh;
 }
 
@@ -154,6 +154,22 @@ form {
     margin-right: 0.5rem;
   }
 
+  .card-asterisk-month::after {
+    content: "*";
+    position: relative;
+    bottom: 35px;
+    left: 65px;
+    color: #cf4055;
+  }
+
+  .card-asterisk-year::after {
+    content: "*";
+    position: relative;
+    bottom: 35px;
+    left: 52px;
+    color: #cf4055;
+  }
+
   .card-year {
     flex-basis: 33%;
   }
@@ -161,22 +177,6 @@ form {
   .card-cvv {
     flex-basis: 33%;
     margin-left: 2.5rem;
-  }
-
-  .requiredOne {
-    position: absolute;
-    color: #cf4055;
-    right: 18px;
-    top: 11px;
-    font-size: 14px;
-  }
-
-  .requiredTwo {
-    position: absolute;
-    color: #cf4055;
-    right: 23px;
-    top: 11px;
-    font-size: 14px;
   }
 }
 
@@ -265,7 +265,7 @@ form {
 
   .main-header {
     position: initial;
-    margin: 5rem auto 0.8rem 1rem;
+    margin: 5rem auto 0.8rem 1.5rem;
   }
 
   .payment-type,
@@ -278,7 +278,7 @@ form {
   }
 
   .card {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
   }
 
   .expiry-date-and-cvv {
@@ -303,7 +303,8 @@ form {
     width: 100%;
     color: #fff;
     box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.15);
-    padding: 1rem 0;
+    padding-bottom: 10rem;
+    margin-top: auto;
 
     button {
       display: block;
@@ -320,5 +321,9 @@ form {
       flex-basis: 100%;
       margin: 0 0 1rem 0;
     }
+  }
+
+  .buttons-container {
+    padding-bottom: 7rem;
   }
 }
