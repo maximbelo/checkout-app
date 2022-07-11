@@ -159,7 +159,7 @@ form {
     content: "*";
     position: relative;
     bottom: 35px;
-    left: 64px;
+    left: 65px;
     color: #cf4055;
   }
 
@@ -167,7 +167,7 @@ form {
     content: "*";
     position: relative;
     bottom: 35px;
-    left: 50px;
+    left: 52px;
     color: #cf4055;
   }
 
@@ -278,18 +278,6 @@ form {
 
   .form-content {
     width: auto;
-  }
-
-  .form-group {
-    label {
-      font-size: 16px;
-      top: 18px;
-    }
-
-    input:focus ~ label,
-    input:not(:placeholder-shown) ~ label {
-      z-index: -1;
-    }
   }
 
   .card {
